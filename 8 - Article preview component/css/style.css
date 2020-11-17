@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+}
+
+main{
+    max-width: 730px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    transform: translateY(50%);
+    display: flex;
+}
+
+.objects {
+    width: 285px;
+    height: 100%;
+    /*background-color: aqua;*/
+}
+.objects img{
+    width: 100%;
+    height: 100%;
+}
+
+.description{
+    /*background-color: khaki;*/
+    width: 445px;
+    height: 100%;
+    padding: 40px 40px 30px 40px;
+    position: relative;
+}
+
+.description h1 {
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 18px;
+}
+
+.description > p {
+    color: hsl(214, 17%, 51%);
+    margin-bottom: 18px;
+}
+
+article{
+    display: flex;
+    height: 40px;
+    /*background-color: lawngreen;*/
+}
+
+article img.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+article div.profile {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    /*background-color: lemonchiffon;*/
+    justify-content: space-evenly;
+    padding-left: 18px;
+}
+
+article div p:first-child{
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+article div p:last-child{
+    color: hsl(214, 17%, 51%);
+}
+
+article div.circle-share{
+    width: 32px;
+    height: 32px;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    margin: auto;
+}
+
+article img.share{
+    width: 16px;
+    height: 16px;
+    transform: translate(50%, 50%);
+}
+
+.share-content {
+    height: 56px;
+    width: 248px;
+    position: absolute;
+    right: -60px;
+    bottom: 90px;
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-content h4 {
+    color: hsl(214, 17%, 51%);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    padding-left: 38px;
+}
+
+.share-content nav a{
+    padding-right: 16px;
+}
+.share-content nav a:first-child{
+    padding-left: 22px;
+}
+
+.clip{
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    height: 13px;
+    width: 24px;
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    top: 55px;
+    left: 115px;
+}
+@media all and (max-width: 875px){
+    .share-content {
+        height: 90px;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        justify-content: left;
+    }
+    .clip{
+        top: 0px;
+        left: 0px;
+    }
+    article div.circle-share{
+        z-index: 1;
+        float: right;
+    }
+}
+@media all and (max-width: 775px){
+    main {
+        width: calc(100% - 48px);
+    }
+    .objects, .objects img{
+        width: 100%;
+    }
+    .description{
+        width: 100%;
+        height: 100%;
+        padding: 40px 32px 16px;
+    }
+}
+@media all and (max-width: 650px){
+    main{
+        flex-direction: column;
+        transform: translateY(10vh);
+        margin: 0 auto;
+        height: 100%;
+    }
+    .objects, .objects img{
+        height: 200px;
+    }
+    .share-content {
+        height: 65px;
+        border-bottom-left-radius: 10px;
+    }
+}
+@media all and (max-width: 550px){
+    .description{
+        width: 100%;
+        height: 100%;
+        padding: 40px 32px 16px;
+    }
+}
+@media all and (max-width: 500px){
+    article div.profile {
+        max-width: 190px;
+    }
+}
+@media all and (max-width: 360px){
+    article div.profile {
+        max-width: 150px;
+    }
+}
+@media all and (max-width: 320px){
+    article div.profile {
+        max-width: 135px;
+    }
+    .share-content nav a{
+        padding-right: 6px;
+    }
+    .share-content h4 {
+        padding-left: 20px;
+    }
+}
+@media all and (max-width: 320px){
+    article div.profile {
+        max-width: 100px;
+    }
+    .share-content nav a{
+        padding-right: 2px;
+    }
+    .share-content h4 {
+        padding-left: 10px;
+    }
+}
